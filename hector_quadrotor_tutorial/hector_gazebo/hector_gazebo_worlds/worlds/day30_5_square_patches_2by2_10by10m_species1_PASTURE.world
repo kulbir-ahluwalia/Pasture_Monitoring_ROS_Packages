@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <scene>
+      <ambient>0.5 0.5 0.5 1</ambient>
+      <background>0.5 0.5 0.5 1</background>
+      <shadows>false</shadows>
+    </scene>
+    <gui fullscreen="0">
+      <camera name="user_camera">
+        
+        
+        
+        <pose frame="">4.65517 -0.708308 1.57488 -0 0.521 2.156</pose>
+      </camera>
+    </gui>
+
+
+
+
+
+    <physics name="unthrottled1" type="ode">
+      <gravity>0 0 0</gravity>
+      
+      <!-- <real_time_update_rate>1000</real_time_update_rate> -->
+      <real_time_update_rate>0</real_time_update_rate>
+      <ode>
+        <solver>
+          
+          
+          <island_threads>16</island_threads>
+        </solver>
+      </ode>
+      
+      <max_step_size>0.001</max_step_size>
+    </physics>
+    
+    
+
+
+
+    <light name="user_directional_light_0" type="directional">
+      <pose frame="">3.13274 6.52075 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <direction>0.1 0.1 -0.9</direction>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>1</cast_shadows>
+    </light>
+
+    
+    <model name="ground_plane">
+      <link name="ground_plane_link">
+        <pose>-2 -2 0 0 0 0</pose>
+        <collision name="ground_plane_collision">
+          <geometry>
+            <mesh>
+              
+              <uri>file:///home/ksa/Desktop/Pasture_Monitoring/FINAL_SCRIPTS/generated_ground.dae</uri>
+              <scale>0.5 0.5 0.5</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="ground_plane_tri">
+          <geometry>
+            <mesh>
+              
+              <uri>file:///home/ksa/Desktop/Pasture_Monitoring/FINAL_SCRIPTS/generated_ground.dae</uri>
+              <scale>0.5 0.5 0.5</scale>
+            </mesh>
+          </geometry>
+          <cast_shadows>false</cast_shadows>
+        </visual>
+      </link>
+      <static>true</static>
+    </model>
+  <model name="grass_ryegrass1">
+      <link name="grass_ryegrass1_link">
+        <pose>0.0 0.0 0.0 0 0 0</pose>
+         <inertial>
+          <origin xyz="0 0 1" rpy="0 0 0"/>
+          <mass value="1"/>
+          <inertia
+            ixx="1.0" ixy="0.0" ixz="0.0"
+            iyy="1.0" iyz="0.0"
+            izz="1.0"/>
+        </inertial>
+        <collision name="grass_ryegrass1_collision">
+          <geometry>
+            <mesh>
+              <!-- <uri>/home/ksa/Desktop/Pasture_Monitoring/patches/day30/lowpoly_patches/test2by2m_square_patch_index_0.dae</uri> -->
+              <!-- <uri>/home/ksa/Desktop/Pasture_Monitoring/grass_meshes/Manual_export/10_grasses.dae</uri> -->
+              <!-- <uri>/home/ksa/Desktop/Pasture_Monitoring/FINAL_SCRIPTS/day168_30percent_variance_max_height/16_plants_exact_boolean.dae</uri> -->
+              <uri>/home/ksa/Desktop/Pasture_Monitoring/patches/day168_max_height_30percent_variance/2by2m_square_patch_index_0.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="grass_ryegrass1">
+          <geometry>
+            <mesh>
+              <!-- <uri>/home/ksa/Desktop/Pasture_Monitoring/patches/day30/lowpoly_patches/test2by2m_square_patch_index_0.dae</uri> -->
+              <!-- <uri>/home/ksa/Desktop/Pasture_Monitoring/FINAL_SCRIPTS/day168_30percent_variance_max_height/16_plants_exact_boolean.dae</uri> -->
+              <uri>/home/ksa/Desktop/Pasture_Monitoring/patches/day168_max_height_30percent_variance/2by2m_square_patch_index_0.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <cast_shadows>false</cast_shadows>
+        </visual>
+      </link>
+      <static>1</static>   
+      <self_collide>false</self_collide>
+      <allow_auto_disable>0</allow_auto_disable>
+</model></world>
+</sdf>

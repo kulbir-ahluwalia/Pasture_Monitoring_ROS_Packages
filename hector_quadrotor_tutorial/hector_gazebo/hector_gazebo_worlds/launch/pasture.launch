@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<launch>
+  <include file="$(find hector_gazebo_worlds)/launch/start.launch">
+   <arg name="world" value="$(find hector_gazebo_worlds)/worlds/day30_5_square_patches_2by2_10by10m_species1_PASTURE.world"/>
+  </include>
+</launch>

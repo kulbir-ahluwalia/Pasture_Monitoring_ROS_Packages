@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<launch>
+  <include file="$(find hector_gazebo_worlds)/launch/start.launch">
+   <!-- <arg name="world" value="$(find hector_gazebo_worlds)/worlds/day168MAX_HEIGHT_10by10m_species1_PASTURE.world"/>  -->
+   <!-- <arg name="world" value="$(find hector_gazebo_worlds)/worlds/day365MIN_HEIGHT_10by10m_species1_PASTURE.world"/>  -->
+
+   <!-- <arg name="world" value="$(find hector_gazebo_worlds)/worlds/april_worlds/day91april_1_2009.world"/> -->
+
+   <arg name="world" value="$(find hector_gazebo_worlds)/worlds/april_worlds/test_5plants_with_hector_quadcopter.world"/>
+   
+   
+  </include>
+
+</launch>

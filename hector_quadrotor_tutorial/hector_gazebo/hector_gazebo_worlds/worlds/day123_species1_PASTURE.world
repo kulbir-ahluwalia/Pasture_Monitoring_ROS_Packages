@@ -1,0 +1,103 @@
+<sdf version="1.4">
+  <world name="default">
+    <scene>
+      <ambient>0.5 0.5 0.5 1</ambient>
+      <background>0.5 0.5 0.5 1</background>
+      <shadows>false</shadows>
+    </scene>
+    <gui fullscreen="0">
+      <camera name="user_camera">
+        
+        
+        
+        <pose frame="">4.65517 -0.708308 1.57488 -0 0.521 2.156</pose>
+      </camera>
+    </gui>
+
+
+
+
+
+    <physics name="unthrottled1" type="ode">
+      <gravity>0 0 -9.8</gravity>
+      
+      <real_time_update_rate>0</real_time_update_rate>
+      <ode>
+        <solver>
+          
+          
+          <island_threads>64</island_threads>
+        </solver>
+      </ode>
+      
+      <max_step_size>0.001</max_step_size>
+    </physics>
+    
+    
+
+    <light name="user_directional_light_0" type="directional">
+      <pose frame="">3.13274 6.52075 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <direction>0.1 0.1 -0.9</direction>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>1</cast_shadows>
+    </light>
+
+    
+    <model name="ground_plane">
+      <link name="ground_plane_link">
+        <pose>-20 -20 0 0 0 0</pose>
+        <collision name="ground_plane_collision">
+          <geometry>
+            <mesh>
+              
+              <uri>file:///home/ksa/Desktop/Pasture_Monitoring/scripts/generated_ground.dae</uri>
+              <scale>10 10 10</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="ground_plane_tri">
+          <geometry>
+            <mesh>
+              
+              <uri>file:///home/ksa/Desktop/Pasture_Monitoring/scripts/generated_ground.dae</uri>
+              <scale>10 10 10</scale>
+            </mesh>
+          </geometry>
+          <cast_shadows>false</cast_shadows>
+        </visual>
+      </link>
+      <static>true</static>
+    </model>
+  <model name="grass_ryegrass1">
+      <link name="grass_ryegrass1_link">
+        <pose>0 0 0.0 0 0 0</pose>
+        <collision name="grass_ryegrass1_collision">
+          <geometry>
+            <mesh>
+              <uri>/home/ksa/catkin_ws/src/hector_quadrotor_tutorial/hector_gazebo/hector_gazebo_worlds/worlds/8by6_ryegrass_patch_21600plants.dae.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="grass_ryegrass1">
+          <geometry>
+            <mesh>
+              <uri>/home/ksa/catkin_ws/src/hector_quadrotor_tutorial/hector_gazebo/hector_gazebo_worlds/worlds/8by6_ryegrass_patch_21600plants.dae.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <cast_shadows>false</cast_shadows>
+        </visual>
+      </link>
+      <static>1</static>   
+      <self_collide>false</self_collide>
+      <allow_auto_disable>0</allow_auto_disable>
+</model></world>
+</sdf>
